@@ -13,7 +13,7 @@ export class EmailService {
 
     sendOTP(payload: { email: string, code: string }) {
         return this.resend.emails.send({
-            from: 'Yenx P. <onboarding@resend.dev>',
+            from: 'Yenx P. <no-reply@phamyen.id.vn>',
             to: [payload.email],
             subject: 'Mã OTP',
             html: `<strong>${payload.code}</strong>`,
