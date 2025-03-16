@@ -60,6 +60,7 @@ export class AuthService {
     }
 
     async sendOTP(body: SendOTPBodyType) {
+        
         // 1. Kiểm tra email đã tồn tại hay chưa (db)
         const user = await this.sharedUserRepository.findUnique({ email: body.email })
         if (user) {
